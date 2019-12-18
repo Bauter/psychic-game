@@ -18,7 +18,7 @@ console.log(computerPick);          // logging for accuracy
 document.onkeyup = function(event){
     let userGuess = event.key;
 
-    userGuess.toLowerCase;                //attempt to change keys to lower case
+   // userGuess.toLowerCase;                //attempt to change keys to lower case
     
     yourGuessesSoFar.push(userGuess);
 
@@ -39,14 +39,14 @@ document.onkeyup = function(event){
     //When guesses left = 0, one increment will be added to 'losses'. reset function invoked and game reset.
     if (userGuess === computerPick) {   
         wins++;
+        alert('You WON! Play again?')
+        reset();
+    } else if (guessesLeft === 0) {
+        losses++;
+        alert('GAME OVER! ' + 'You lost: ' + losses + ' time(s), try again?');
         reset();
     } else {
         guessesLeft--;
-    } if (guessesLeft === 0) {
-        losses++;
-        reset();
-    } else {
-        alert("Guess again!");
     };
 
     console.log(wins);                      // logging for accuracy

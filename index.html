@@ -3,29 +3,33 @@
 
         <title>The Psychic Game</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-            
-            <script src="assets/javascript/game.js"></script>
+            <link rel="stylesheet" href="assets/css/style.css">
 
+            <script src="assets/javascript/game.js"></script>
+          
     </head>
 
     <body>
         <header>
-            <div class="jumbotron ml-2 mr-2">
-                <h1 class="display-4 text-center">Psychic Game!</h1>
-                    <p class="lead text-center">This is a simple game where you try to guess a letter A-Z to match the computer guess!.</p>
-                    <hr id="my-4">
-                    <div id="winScore"></div>
-                    <br>
-                    <div id="lossesScore"></div>
-                    <br>
-                    <div id="guessesCounter"></div>
-                    <br>
-                    <div id="guessesSoFar"></div>
-                    <br>
-                    <div id="computerPicked"></div> <!--want to use to display choice right before reset-->
-            
+            <div id="imgJumbo" class="jumbotron ml-4 mr-4 mt-4">
+                <div id="textJumbo" class="jumbotron ml-8 mr-8 mt-6">
+                    
+                    <h1 id="psychic" class="display-4 text-center">Psychic Game!</h1>
+                        <p id="details" class="lead text-center">This is a simple game where you try to guess a letter <span>a-z</span> to match the computer guess!.</p>
+                        <hr id="my-4">
+                        <p id="begin" class="text-center">Select your first guess on the keyboard to begin the game!</p>
+                        <div id="winScore"></div>
+                        <br>
+                        <div id="lossesScore"></div>
+                        <br>
+                        <div id="guessesCounter"></div>
+                        <br>
+                        <div id="guessesSoFar"></div>
+                        
+                </div>
             </div>        
         </header>
 

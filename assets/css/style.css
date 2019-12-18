@@ -1,0 +1,55 @@
+
+body {
+    background-image: url(../images/questionMarks.jpg);
+}
+
+span {
+    color: red;
+    font-size: 30px;
+}
+.jumbotron {
+    opacity: .9;
+}
+
+#psychic {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+}
+
+#winScore {
+    font-family: fantasy;
+    color: green;
+    font-size: 20px;
+}
+
+#lossesScore {
+    font-family: fantasy;
+    color: red;
+    font-size: 20px;
+}
+
+#guessesCounter {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: rgb(173, 173, 32);
+}
+
+#guessesSoFar {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: blue;
+}
+
+#details {
+    font-family: monospace;
+    font-size: 20px;
+}
+
+#begin {
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: 700;
+}
+
+
+
