@@ -6,65 +6,63 @@ let wins = 0;
 let losses = 0;
 let yourGuessesSoFar = [];
 
+// used to generate a random number and assign to 'computerGuess', that number is then used to index the array and choose the string with the matching index number.
+let computerGuess = [Math.floor(Math.random(computerGuessArray) * computerGuessArray.length)];
+let computerPick = computerGuessArray[computerGuess];
+console.log(computerPick);          // logging for accuracy
+
+
 // FUNCTIONS
-
-// computerGuess picks from array (computer guess)
-/*let computerGuess = (computerGuessArray) => {
-    return computerGuessArray[Math.floor(Math.random() * computerGuessArray.length)];
-    
-};*/
-
-
-// Reset function
-/*let reset = () => {
-    computerGuess(computerGuessArray);
-    guessesLeft = 10;
-    yourGuessesSoFar = '';
-};*/
 
 // user makes guess
 document.onkeyup = function(event){
     let userGuess = event.key;
 
-   // yourGuessesSoFar = event.key;
+    userGuess.toLowerCase;                //attempt to change keys to lower case
+    
     yourGuessesSoFar.push(userGuess);
 
-    console.log(userGuess); // logging for accuracy
+    console.log(userGuess);         // logging for accuracy
 
-    let computerGuess = (computerGuessArray) => {
-        computerGuessArray[Math.floor(Math.random() * computerGuessArray.length)];
-        
-        console.log(computerGuess);
-    };
-
-    // logging for accuracy
-   
-    let reset = () => {
-        computerGuess(computerGuessArray);
+    
+   // function used to reset variables, then generate a new random number, that is then used to index to the array and assign a new 'string' (letter).
+    function reset() {
         guessesLeft = 10;
         yourGuessesSoFar = [];
+        computerGuess = [Math.floor(Math.random(computerGuessArray) * computerGuessArray.length)];
+        computerPick = computerGuessArray[computerGuess];
+        console.log(computerPick);          // logging for accuracy
     };
+    
 
-    if(userGuess === computerGuess) {     // change in score (wins and losses)
+    //Conditional statement used to score the game, user choice is compared to random computer choice, if equal the game is won, if unequal one guess is removed from 'guessesLeft'.
+    //When guesses left = 0, one increment will be added to 'losses'. reset function invoked and game reset.
+    if (userGuess === computerPick) {   
         wins++;
+        reset();
     } else {
         guessesLeft--;
     } if (guessesLeft === 0) {
         losses++;
         reset();
+    } else {
+        alert("Guess again!");
     };
+
     console.log(wins);                      // logging for accuracy
     console.log(guessesLeft);               // logging for accuracy
 
-    // display choices in document
+    // manipulate the DOM by using 'wS', 'ls", 'gC', and 'gSF' variables to associate with specified <div> id's on HTML file. innerHTML method used to input text from string and global variable
     let wS = document.getElementById('winScore');
     wS.innerHTML = 'Wins: ' + wins;
     let lS = document.getElementById('lossesScore');
-    lS.innerHTML = 'Losses ' + losses;
+    lS.innerHTML = 'Losses: ' + losses;
     let gC = document.getElementById('guessesCounter');
-    gC.innerHTML = 'Guesses Remaining ' + guessesLeft;
+    gC.innerHTML = 'Guesses Remaining: ' + guessesLeft;
     let gSF = document.getElementById('guessesSoFar');
-    gSF.innerHTML = 'Letters guessed so far ' + yourGuessesSoFar;
+    gSF.innerHTML = 'Letters guessed: ' + yourGuessesSoFar;
+    /*let cP = document.getElementById('computerPicked');     // error - want to display when guessesLeft === 0 and then reset and disappear on reset
+    cP.innerHTML = 'The computer chose: ' + computerGuess;*/
 };
 
 
