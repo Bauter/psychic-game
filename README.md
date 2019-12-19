@@ -6,8 +6,9 @@ The purpose of this repo is to create a basic guessing game.
 
 -The object is to have the computer select a random letter "a-z" and give the user 10 guesses to select the matching letter.
 
-    -If the user fails to select the matching letter, a 'losses' counter is applied, an alert pops up informing the player they have lost and asking if they would like to play again. Upon clicking out of the alert window via the 'ok' button, the game is reset, returning 'guesses left to 10', clearing out 'guesses so far', and the computer selects a new random letter. 
-    -If the user matches the computer guess, a "wins" counter is applied, an alert pops up informing the player they have won, displays the computer choice, and asks if they would like to play again. Upon clicking out of the alert window via the 'ok' button, the game is reset, returning 'guesses left to 10', clearing out 'guesses so far', and the computer selects a new random letter. 
+-If the user fails to select the matching letter, a 'losses' counter is applied, an alert pops up informing the player they have lost and asking if they would like to play again. Upon clicking out of the alert window via the 'ok' button, the game is reset, returning 'guesses left to 10', clearing out 'guesses so far', and the computer selects a new random letter. 
+  
+-If the user matches the computer guess, a "wins" counter is applied, an alert pops up informing the player they have won, displays the computer choice, and asks if they would like to play again. Upon clicking out of the alert window via the 'ok' button, the game is reset, returning 'guesses left to 10', clearing out 'guesses so far', and the computer selects a new random letter. 
 
 
 Initially this project was designed for my "Web-dev coding boot-camp" as an entry level basic javascript project.
