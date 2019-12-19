@@ -39,7 +39,7 @@ document.onkeyup = function(event){
     //When guesses left = 0, one increment will be added to 'losses'. reset function invoked and game reset.
     if (userGuess === computerPick) {   
         wins++;
-        alert('You WON! Play again?')
+        alert('You WON! The letter was: ' +  computerPick + '. Play again?')
         reset();
     } else if (guessesLeft === 0) {
         losses++;
@@ -61,8 +61,7 @@ document.onkeyup = function(event){
     gC.innerHTML = 'Guesses Remaining: ' + guessesLeft;
     let gSF = document.getElementById('guessesSoFar');
     gSF.innerHTML = 'Letters guessed: ' + yourGuessesSoFar;
-    /*let cP = document.getElementById('computerPicked');     // error - want to display when guessesLeft === 0 and then reset and disappear on reset
-    cP.innerHTML = 'The computer chose: ' + computerGuess;*/
+   
 };
 
 
