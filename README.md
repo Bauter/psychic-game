@@ -29,7 +29,7 @@ https://bauter.github.io/psychic-game/
 -Local CSS file created and used to style text and background image. Linked in between 'head' tags and within an opening 'script' tag, the file path relative to the html file, and closed by a closing script tag. 
 
 #### Javascript #####
--Javascript file was created to write the logic for the game. creating functions to:
+-Javascript file was created to write the logic for the game. creating functions to:<br>
     1. Log user input via event.key<br>
     2. Generating a random computer choice using [Math.floor(Math.random) * array.length] and indexing into a defined array of strings, each string being a single letter in the alphabet. <br>
     3. Conditional else if statement was used to compare user choice to computer choice, based on the condition either the player wins and a wins counter is scored and reset. Or the player loses a guess counter until guess remaining equals zero, at which point the game is lost and reset.<br>
