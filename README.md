@@ -17,6 +17,8 @@ Initially this project was designed for my "Web-dev coding boot-camp" as an entr
 
 https://bauter.github.io/psychic-game/
 
+![psychic-app](psychic.gif)
+
 ### How was this project created? ###
 
 ##### Coding #####
